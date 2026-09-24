@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simone Piccirillo - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-900 antialiased selection:bg-red-600 selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full bg-white/95 backdrop-blur-md border-b border-red-100 z-50 px-6 py-4 grid grid-cols-3 items-center shadow-sm">
+    <!-- 1ª Colonna: Nome a sinistra -->
+    <div class="justify-self-start">
+        <h1 class="text-xl font-extrabold tracking-tight text-gray-900">
+            Simone Piccirillo
+        </h1>
+    </div>
+
+    <!-- 2ª Colonna: Portfolio esattamente al centro -->
+    <div class="justify-self-center text-center">
+        <p class="text-4xl font-extrabold uppercase tracking-widest text-red-600">
+            Portfolio
+        </p>
+    </div>
+
+    <!-- 3ª Colonna: Spazio vuoto a destra -->
+    <div></div>
+</header>
+
+    <!-- Contenitore principale -->
+    <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
+        <div class="grid grid-cols-3 gap-8 items-start">
+            <!-- Bio -->
+            <section class="mb-20 bg-red-50/50 border border-red-100 rounded-3xl p-8 sm:p-10 shadow-sm">
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <!-- Bottoni di selezione lingua -->
+                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
+                            <button onclick="switchLanguage('p5', 'it')" id="btn-p5-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
+                            <button onclick="switchLanguage('p5', 'eng')" id="btn-p5-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
+                        </div>
+                    </div>
+                    <h2 class="text-2xl text-center sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                        Bio
+                    </h2>
+                    <div id="p5-desc-it" class="text-black leading-relaxed text-base">
+                        <p>Ciao, sono Simone, Sviluppatore e Sound Designer.<br>
+                        Attualmente cerco lavoro come Sviluppatore in ambiti riguardo la programmazione Backend, Database, Sviluppo Web, DSP Audio e Gaming.<br> 
+                        Parallelamente lavoro come Musicista e Sound Designer per progetti Indie e sono sempre aperto a nuove opportunità.<br>
+                            <div>
+                                <a href="" class="inline-flex items-center mt-4 gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md shadow-red-600/20">
+                                <span>Download My CV</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </p>
+                    </div>
+                    <div id="p5-desc-eng" class="text-black leading-relaxed text-base hidden">
+                        <p>Hello, I'm Simone, Developer and Sound Designer.<br>
+                        I'm looking for a Developer job in areas such as Backend Programming, Databases, Web Development, DSP Audio and Gaming.<br> 
+                        At the same time I work as a Musician and Sound Designer on independent projects and I'm always open to new opportunities.<br>
+                            <div>
+                                <a href="" class="inline-flex items-center mt-4 gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md shadow-red-600/20">
+                                <span>Download My CV</span>
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                                </a>
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <!-- Lista centrale dei progetti (Anchor Links) -->
+            <section class="mb-20 text-center bg-red-50/50 border border-red-100 rounded-3xl p-8 sm:p-10 shadow-sm">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                    Projects
+                </h2>
+                <nav class="flex flex-col gap-3 max-w-md mx-auto">
+                    <a href="#TheWalkingGuy" class="group flex items-center justify-between bg-white border border-red-200 p-4 rounded-xl shadow-xs hover:bg-red-600 hover:border-red-600 transition-all duration-200">
+                        <span class="font-bold text-sm text-gray-900 group-hover:text-white transition-colors">The Walking Guy: Unity Game</span>
+                        <span class="text-xs font-bold text-red-600 group-hover:text-white bg-red-50 group-hover:bg-red-700 px-2.5 py-1 rounded-lg transition-colors">&rarr;</span>
+                    </a>
+                    <a href="#DistModulation" class="group flex items-center justify-between bg-white border border-red-200 p-4 rounded-xl shadow-xs hover:bg-red-600 hover:border-red-600 transition-all duration-200">
+                        <span class="font-bold text-sm text-gray-900 group-hover:text-white transition-colors">DistModulation: VST3 Audio Plugin</span>
+                        <span class="text-xs font-bold text-red-600 group-hover:text-white bg-red-50 group-hover:bg-red-700 px-2.5 py-1 rounded-lg transition-colors">&rarr;</span>
+                    </a>
+                    <a href="#Muusico" class="group flex items-center justify-between bg-white border border-red-200 p-4 rounded-xl shadow-xs hover:bg-red-600 hover:border-red-600 transition-all duration-200">
+                        <span class="font-bold text-sm text-gray-900 group-hover:text-white transition-colors">Muusico: Web Site</span>
+                        <span class="text-xs font-bold text-red-600 group-hover:text-white bg-red-50 group-hover:bg-red-700 px-2.5 py-1 rounded-lg transition-colors">&rarr;</span>
+                    </a>
+                        <a href="#GameOver" class="group flex items-center justify-between bg-white border border-red-200 p-4 rounded-xl shadow-xs hover:bg-red-600 hover:border-red-600 transition-all duration-200">
+                        <span class="font-bold text-sm text-gray-900 group-hover:text-white transition-colors">Game Over: Sound Design</span>
+                        <span class="text-xs font-bold text-red-600 group-hover:text-white bg-red-50 group-hover:bg-red-700 px-2.5 py-1 rounded-lg transition-colors">&rarr;</span>
+                    </a>
+                </nav>
+            </section>
+            <!-- Contacts -->
+            <section class="mb-20 text-center bg-red-50/50 border border-red-100 rounded-3xl p-8 sm:p-10 shadow-sm">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                    Contacts
+                </h2>
+                <p><b>Email:</b> simone.piccirillo@hotmail.it<br>
+                   <b>Tel:</b> +39 3495624000<br>
+                   <b>Linkedin:</b> <a href="https://www.linkedin.com/in/simone-piccirillo-427143164/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-black text-sm"><u>Clicca qui</u></a>
+                </p>
+            </section>
+        </div>
+
+        <!-- Sezioni dei progetti disposte verticalmente -->
+        <div class="space-y-20">
+
+            <!-- PROGETTO 1 -->
+            <article id="TheWalkingGuy" class="max-w-3xl mx-auto bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 shadow-lg shadow-gray-100 scroll-mt-28">
+                <div class="mb-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">Unity Game</span>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mt-2">The Walking Guy</h3>
+                </div>
+
+                <!-- 1) Video di presentazione (sopra) -->
+                <div class="relative w-full aspect-video bg-gray-900 rounded-2xl overflow-hidden mb-6 shadow-md">
+                    <!-- <iframe class="w-full h-full object-cover" src="TheWalkingGuy_Gameplay.mp4" title="The Walking Guy Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/wOKk4TIxLlo?si=MYU9muAME417imGY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Spiegazione con Tasti IT / ENG -->
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
+                        <!-- Bottoni di selezione lingua -->
+                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
+                            <button onclick="switchLanguage('p1', 'it')" id="btn-p1-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
+                            <button onclick="switchLanguage('p1', 'eng')" id="btn-p1-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
+                        </div>
+                    </div>
+
+                    <!-- Paragrafo Italiano -->
+                    <div id="p1-desc-it" class="text-gray-700 leading-relaxed text-base">
+                        Gioco realizzato con Unity per la parte grafica e logica e FMOD per l'audio.<br>
+                        <u>Presenta 2 scene:</u><br>
+                        <b>Strat Menù -></b> Menù iniziale in cui si possono consultare le regole del gioco e i controlli necessari per muovere il Player, un button per l'avvio e un button per l'uscita dal gioco.<br>
+                        <b>Playing Game -></b> Gioco effettivo in cui si muove il Player e si fa interagire con l'ambiente, costituito da delle piattaforme centrali che collegano 6 stanze dove per ognuna è stata composta una musica ed implementato un suono di passi diverso.<br>
+                         È stato implementato anche il Sound Design riguardo i suoni relativi al Player come i passi, salto e affanno (dopo tot passi effettuati di seguito).
+                    </div>
+
+                    <!-- Paragrafo Inglese-->
+                    <div id="p1-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                        A game developed using Unity for graphics and logic, and FMOD for audio.<br>
+                        <u>Features 2 scenes:</u><br>
+                        <b>Start Menu -></b> An initial menu where you can view the game rules and movement controls, as well as buttons to start or exit the game.<br>
+                        <b>Gameplay -></b> The actual game where the player moves and interacts with the environment, the setting consists of central platforms connecting six rooms, each featuring a unique musical composition and different footsteps sound.<br>
+                        Sound design has also been implemented for player-related sounds, footsteps, jumping and  heavy breathing (after a certain number of footsteps).
+                    </div>
+                </div>
+
+                <!-- 3) Tecnologie usate (Badge rosso e bianco) -->
+                <div class="mb-8">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Unity</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">C#</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">FMOD</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Cubase</span>
+                    </div>
+                </div>
+
+                <!-- 4) Link seconda finestra (target="_blank") -->
+                <!-- <div>
+                    <a href="https://drive.google.com/file/d/1ZF_YlyzqcJcExapxTvP0Qri0tvG8YMjj/view" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md shadow-red-600/20">
+                        <span>Download The Game</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div> -->
+            </article>
+
+            <!-- PROGETTO 2 -->
+            <article id="DistModulation" class="max-w-3xl mx-auto bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 shadow-lg shadow-gray-100 scroll-mt-28">
+                <div class="mb-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">VST3 Audio Plugin</span>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mt-2">DISTMODULATION</h3>
+                </div>
+
+                <!-- 1) Video di presentazione -->
+                <div class="relative w-full aspect-video bg-gray-900 rounded-2xl overflow-hidden mb-6 shadow-md">
+                    <!-- <iframe class="w-full h-full object-cover" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="DistModulation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <img src="GUI_DistModulation.png" alt="">
+                </div>
+
+                <!-- Spiegazione con Tasti IT / ENG -->
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
+                        <!-- Bottoni di selezione lingua -->
+                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
+                            <button onclick="switchLanguage('p2', 'it')" id="btn-p2-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
+                            <button onclick="switchLanguage('p2', 'eng')" id="btn-p2-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
+                        </div>
+                    </div>
+
+                    <!-- Paragrafo Italiano -->
+                    <div id="p2-desc-it" class="text-gray-700 leading-relaxed text-base">
+                        Plugin Audio in formato Vst3 di una Catena Modulare Di Effetti.<br>
+                        Il Plugin presenta 3 effetti:<br>
+                        -<b>Distorsore:</b> 3 tipologie di distorsione (Overdrive, Lead, Fuzz) Diversi parametri disponibili tra cui l'accensione e lo spegnimento di un filtro HighPass posto pre-distorsione (Button HP) Sviluppi futuri per questo effetto -> Migliorare la qualità della distorsione<br>
+                        -<b>Delay:</b> Delay frazionario Il parametro di Tone modifica solo la timbrica delle ripetizioni Sviluppi futuri per questo effetto -> Impostazione del tempo di ritardo in bpm, permettere al parametro del Tone di agire anche su tutto il segnale, implementazione di saturazioni e oscillatori per rendere il suono più analogico<br>
+                        -<b>Chorus:</b> Dual-Mono Chorus Sviluppi futuri per questo effetto -> aumentare il numero di voci rendere l'effetto più presente<br>
+                        I 3 effetti sono implementati in una catena modulabile che permette il posizionamento degli effetti in qualsiasi punto della catena secondo la preferenza dell'utente Sviluppi futuri per la catena -> Rendere il posizionamento degli effetti tramite un'operazione di Drag&Drop<br>
+                        <br>Ascolta degli esempi registrati utilizzando il Plugin:<br>
+                    </div>
+
+                    <!-- Paragrafo Inglese-->
+                    <div id="p2-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                        Audio Plugin in VST3 format for a Modular Effects Chain<br>
+                        The plugin features 3 effects:<br>
+                        -<b>Distortion:</b> 3 types of distortion (Overdrive, Lead, Fuzz) Various parameters available, including turning on and off a pre-distortion HighPass filter (HP Button) Future developments for this effect -> Improve distortion quality<br>
+                        -<b>Delay:</b> Fractional Delay The Tone parameter only changes the timbre of the repeats Future developments for this effect -> Set the delay time in bpm, allow the Tone parameter to affect the entire signal, implement saturations and oscillators to make the sound more analog<br>
+                        -<b>Chorus:</b> Dual-Mono Chorus Future developments for this effect -> Increase the number of voices to make the effect more present<br>
+                        The 3 effects are implemented in a modular chain that allows the effects to be positioned anywhere in the chain according to the user's preference Future developments for the chain -> Make the placement of effects via Drag&Drop.<br>
+                        <br>Listen to recorded examples using the Plugin:<br> 
+                    </div>
+                </div>
+                
+                <div class="my-6">
+                    <details class="group bg-gray-50 border border-gray-200 rounded-2xl overflow-hidden transition-all duration-200">
+                        <!-- PULSANTE PRINCIPALE -->
+                        <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer font-bold text-sm sm:text-base text-gray-900 select-none hover:bg-gray-100 transition-colors">
+                            <span class="flex items-center gap-2">
+                                <!-- <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path></svg> -->
+                                Audio Examples
+                            </span>
+                            <!-- Freccina che ruora all'apertura -->
+                            <span class="transform group-open:rotate-180 transition-transform duration-200 text-red-600 font-bold text-lg">&darr;</span>
+                        </summary>
+
+                        <!-- CONTENUTO CHE ESCE AL DI SOTTO -->
+                        <div class="p-4 sm:p-6 border-t border-gray-200 bg-white space-y-4">
+                        
+                            <!-- TRACCIA 1 -->
+                            <div class="mt-4 bg-gray-50 border border-gray-200 p-4 rounded-2xl">
+                                <h4 class="text-s font-bold uppercase tracking-wider text-black-500 mb-2">Delay</h4>
+                                <audio controls class="w-full">
+                                <source src="AudioPlugIn_Example/Amp - Delay.mp3" type="audio/mpeg">
+                                Il tuo browser non supporta l'elemento audio.
+                                </audio>
+                            </div>
+                            <!-- TRACCIA 2 -->
+                            <div class="mt-4 bg-gray-50 border border-gray-200 p-4 rounded-2xl">
+                                <h4 class="text-s font-bold uppercase tracking-wider text-black-500 mb-2">Delay+Chorus</h4>
+                                <audio controls class="w-full">
+                                <source src="AudioPlugIn_Example/Amp - Delay+Chorus A.mp3" type="audio/mpeg">
+                                Il tuo browser non supporta l'elemento audio.
+                                </audio>
+                            </div>
+                            <!-- TRACCIA 3 -->
+                            <div class="mt-4 bg-gray-50 border border-gray-200 p-4 rounded-2xl">
+                                <h4 class="text-s font-bold uppercase tracking-wider text-black-500 mb-2">Delay+Chorus Arp</h4>
+                                <audio controls class="w-full">
+                                <source src="AudioPlugIn_Example/Amp - Delay+Chorus Arp.mp3" type="audio/mpeg">
+                                Il tuo browser non supporta l'elemento audio.
+                                </audio>
+                            </div>
+                            <!-- TRACCIA 4 -->
+                            <div class="mt-4 bg-gray-50 border border-gray-200 p-4 rounded-2xl">
+                                <h4 class="text-s font-bold uppercase tracking-wider text-black-500 mb-2">Delay+Chorus+Fuzz(+Bias)</h4>
+                                <audio controls class="w-full">
+                                <source src="AudioPlugIn_Example/Amp - Delay+Chorus+Fuzz(+Bias).mp3" type="audio/mpeg">
+                                Il tuo browser non supporta l'elemento audio.
+                                </audio>
+                            </div>
+                            <!-- TRACCIA 5 -->
+                            <div class="mt-4 bg-gray-50 border border-gray-200 p-4 rounded-2xl">
+                                <h4 class="text-s font-bold uppercase tracking-wider text-black-500 mb-2">Fuzz+Bias</h4>
+                                <audio controls class="w-full">
+                                <source src="AudioPlugIn_Example/Amp - Fuzz 1 + Bias.mp3" type="audio/mpeg">
+                                Il tuo browser non supporta l'elemento audio.
+                                </audio>
+                            </div>
+                            <!-- TRACCIA 6 -->
+                            <div class="mt-4 bg-gray-50 border border-gray-200 p-4 rounded-2xl">
+                                <h4 class="text-s font-bold uppercase tracking-wider text-black-500 mb-2">Fuzz</h4>
+                                <audio controls class="w-full">
+                                <source src="AudioPlugIn_Example/Amp - Fuzz 1 A.mp3" type="audio/mpeg">
+                                Il tuo browser non supporta l'elemento audio.
+                                </audio>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+
+                <!-- 3) Tecnologie usate -->
+                <div class="mb-8">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">C++</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">JUCE</span>
+                    </div>
+                </div>
+
+                <!-- 4) Link seconda finestra -->
+                <!-- <div>
+                    <a href="https://github.com/SimPicc/Portfolio/tree/main/Developer%20Projects/Unimi%20Final%20Thesis%20-%20DistModulation%20Project/Download%20Plugin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md shadow-red-600/20">
+                        <span>Download The Plugin</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div> -->
+            </article>
+
+            <!-- PROGETTO 3 -->
+            <article id="Muusico" class="max-w-3xl mx-auto bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 shadow-lg shadow-gray-100 scroll-mt-28">
+                <div class="mb-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">Web Site</span>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mt-2">MUUSICO</h3>
+                </div>
+
+                <!-- 1) Video di presentazione -->
+                <div class="relative w-full aspect-video bg-gray-900 rounded-2xl overflow-hidden mb-6 shadow-md">
+                    <!-- <iframe class="w-full h-full object-cover" src="Muusico_Video.mp4" title="Muusico Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                     <iframe width="560" height="315" src="https://www.youtube.com/embed/uXydsLz5tos?si=5oh4awyVrIDRJFHl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Spiegazione con Tasti IT / ENG -->
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
+                        <!-- Bottoni di selezione lingua -->
+                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
+                            <button onclick="switchLanguage('p3', 'it')" id="btn-p3-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
+                            <button onclick="switchLanguage('p3', 'eng')" id="btn-p3-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
+                        </div>
+                    </div>
+
+                    <!-- Paragrafo Italiano -->
+                    <div id="p3-desc-it" class="text-gray-700 leading-relaxed text-base">
+                        Sito Web creato per esame universitario.<br>
+                        Nome del sito: Muusico<br>
+                        Tipologia: Compravendita di strumenti musicali<br>
+                        3 tipologie di utenti:<br>
+                        -<b>Compratore -></b> Può visionare i prodotti, leggere le recensioni fatte da utenti che hanno acquistato quel prodotto, comprare prodotti aggiungendoli nel proprio carrello, scrivere recensioni su prodotti acquistati, visionare gli ordini fatti in precedenza<br>
+                        -<b>Venditore -></b> Può aggiungere prodotti da vendere, gestire le quantità dei prodotti in magazzino, modificare gli annunci dei prodotti<br>
+                        -<b>Amministratore -></b> Autorizza l'iscrizione al sito da parte degli utenti, può bloccare/sbloccare utenit, eliminare recensioni, eleminare prodotti<br>
+                        Nel file <b>"funzioni.php"</b> sono presenti le query più importanti per il corretto funzionamento del sito, riguardo l'aggiunta, l'eliminazione o la modifica di prodotti e recensioni, il filtraggio sulla ricerca di un determinato prodotto ecc...<br>
+                        Progetto elaborato in coppia.
+                    </div>
+
+                    <!-- Paragrafo Inglese-->
+                    <div id="p3-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                        Website created for a university exam<br>
+                        Site name: Muusico<br>
+                        Type: Musical instrument marketplace<br>
+                        3 user types:<br>
+                        -<b>Buyer -></b> Can view products, read reviews from users who purchased a specific product, buy products by adding them to the cart, write reviews for purchased products, and view past orders<br>
+                        -<b>Seller -></b> Can add products for sale, manage stock quantities, and edit product listings<br>
+                        -<b>Administrator -></b> Approves user registrations, can block/unblock users, and delete reviews or products<br>
+                        The <b>"funzioni.php"</b> file contains the key queries required for the site's proper functioning—handling the addition, deletion, or modification of products and reviews, product search filtering, etc.<br>
+                        Project developed as a two-person team
+                    </div>
+                </div>
+
+
+                <!-- 3) Tecnologie usate -->
+                <div class="mb-8">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Html</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Css</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Bootstrap</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">PHP</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">JavaScript</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">SQL</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Xamp</span>
+                    </div>
+                </div>
+
+                <!-- 4) Link seconda finestra -->
+                <!-- <div>
+                    <a href="https://github.com/SimPicc/Portfolio/blob/main/Developer%20Projects/Web%20Programming%20Exam%20-%20Muusico%20(Web%20Site)/funzioni.php" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md shadow-red-600/20">
+                        <span>Download The "funzioni.php" File</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div> -->
+            </article>
+            
+            <!-- PROGETTO 4 -->
+            <article id="GameOver" class=" max-w-3xl mx-auto bg-white border border-gray-200 rounded-3xl p-6 sm:p-10 shadow-lg shadow-gray-100 scroll-mt-28">
+                <div class="mb-6">
+                    <span class="text-xs font-bold uppercase tracking-widest text-red-600 bg-red-50 px-3 py-1 rounded-full">Sound Desing</span>
+                    <h3 class="text-2xl font-extrabold text-gray-900 mt-2">GAME OVER</h3>
+                </div>
+
+                <!-- 1) Video di presentazione -->
+                <div class="relative w-full aspect-video bg-gray-900 rounded-2xl overflow-hidden mb-6 shadow-md">
+                    <!-- <iframe class="w-full h-full object-cover" src="https://www.youtube.com/embed/iBrSrkCY6YI?si=0AJBKv_7Yaz5LNHz" title="Game Over Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iBrSrkCY6YI?si=0AJBKv_7Yaz5LNHz" title="Game Over Videor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+
+                <!-- Spiegazione con Tasti IT / ENG -->
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-3">
+                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
+                        <!-- Bottoni di selezione lingua -->
+                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
+                            <button onclick="switchLanguage('p4', 'it')" id="btn-p4-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
+                            <button onclick="switchLanguage('p4', 'eng')" id="btn-p4-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
+                        </div>
+                    </div>
+
+                    <!-- Paragrafo Italiano -->
+                    <div id="p4-desc-it" class="text-gray-700 leading-relaxed text-base">
+                        Progetto di Sound Design su un video animato di una schermata di "Game Over".<br>
+                        Tutti i suoni sono programmati utilizzando SuperCollider, esportati e campionati all'interno di Cubase per poi creare il Sound Design del video.<br>
+                        I suoni programmati sono presente nel file <b>"Game_Over_Project.scd".</b>
+                    </div>
+
+                    <!-- Paragrafo Inglese-->
+                    <div id="p4-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                        Sound design project for an animated "Game Over" screen video.<br>
+                        All sounds were programmed using SuperCollider, then exported and sampled in Cubase to create the video's sound design.<br>
+                        All the programmed sounds are contained in the file <b>"Game_Over_Project.scd"</b>. 
+                    </div>
+                </div>
+
+
+                <!-- 3) Tecnologie usate -->
+                <div class="mb-8">
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">SuperCollider</span>
+                        <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Cubase</span>
+                    </div>
+                </div>
+
+                <!-- 4) Link seconda finestra -->
+                <!-- <div>
+                    <a href="https://github.com/SimPicc/Portfolio/blob/main/Developer%20Projects/Sound%20Design%20Project%20-%20Game%20Over/Game_Over_Project.scd" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white text-sm font-bold px-6 py-3 rounded-xl transition shadow-md shadow-red-600/20">
+                        <span>Download The "Game_Over_Project.scd" File</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
+                </div> -->
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 border-t border-gray-200 py-10 text-center text-xs text-gray-500">
+    </footer>
+
+</body>
+
+<script>
+    function switchLanguage(projectId, lang) {
+        const descIt = document.getElementById(projectId + '-desc-it');
+        const descEng = document.getElementById(projectId + '-desc-eng');
+        const btnIt = document.getElementById('btn-' + projectId + '-it');
+        const btnEng = document.getElementById('btn-' + projectId + '-eng');
+
+        if (lang === 'it') {
+            // Mostra IT, Nascondi ENG
+            descIt.classList.remove('hidden');
+            descEng.classList.add('hidden');
+            
+            // Stile bottone IT attivo
+            btnIt.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm";
+            // Stile bottone ENG inattivo
+            btnEng.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900";
+        } else {
+            // Mostra ENG, Nascondi IT
+            descEng.classList.remove('hidden');
+            descIt.classList.add('hidden');
+            
+            // Stile bottone ENG attivo
+            btnEng.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm";
+            // Stile bottone IT inattivo
+            btnIt.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900";
+        }
+    }
+</script>
+</html>
