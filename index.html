@@ -37,8 +37,16 @@
         </p>
     </div>
 
-    <!-- 3ª Colonna: Spazio vuoto a destra -->
-    <div></div>
+    <!-- 3ª Colonna: Spazio a destra -->
+    <div class="justify-self-end text-center">
+        <div class="flex items-center justify-between mb-3">
+            <!-- Bottoni di selezione lingua -->
+            <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
+                <button onclick="switchGlobalLanguage('it')" class="btn-it px-7 py-3 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
+                <button onclick="switchGlobalLanguage('eng')" class="btn-eng px-7 py-3 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
+            </div>
+        </div>
+    </div>
 </header>
 
     <!-- Contenitore principale -->
@@ -47,17 +55,10 @@
             <!-- Bio -->
             <section class="mb-20 bg-red-50/50 border border-red-100 rounded-3xl p-8 sm:p-10 shadow-sm">
                 <div class="mb-6">
-                    <div class="flex items-center justify-between mb-3">
-                        <!-- Bottoni di selezione lingua -->
-                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
-                            <button onclick="switchLanguage('p5', 'it')" id="btn-p5-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
-                            <button onclick="switchLanguage('p5', 'eng')" id="btn-p5-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
-                        </div>
-                    </div>
                     <h2 class="text-2xl text-center sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
                         Bio
                     </h2>
-                    <div id="p5-desc-it" class="text-black leading-relaxed text-base">
+                    <div class="lan-it text-black leading-relaxed text-base">
                         <p>Ciao, sono Simone, Sviluppatore e Sound Designer.<br>
                         Attualmente cerco lavoro come Sviluppatore in ambiti riguardo la programmazione Backend, Database, Sviluppo Web, DSP Audio e Gaming.<br> 
                         Parallelamente lavoro come Musicista e Sound Designer e sono sempre alla ricerca di nuove opportunità.<br>
@@ -69,7 +70,7 @@
                             </div>
                         </p>
                     </div>
-                    <div id="p5-desc-eng" class="text-black leading-relaxed text-base hidden">
+                    <div class="lan-eng text-black leading-relaxed text-base hidden">
                         <p>Hello, I'm Simone, Developer and Sound Designer.<br>
                         I'm looking for a Developer job in areas such as Backend Programming, Databases, Web Development, DSP Audio and Gaming.<br> 
                         At the same time I work as a Musician and Sound Designer and I'm always looking for new opportunities.<br>
@@ -85,7 +86,10 @@
             </section>
             <!-- Lista centrale dei progetti (Anchor Links) -->
             <section class="mb-20 text-center bg-red-50/50 border border-red-100 rounded-3xl p-8 sm:p-10 shadow-sm">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                <h2 class="lan-it text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                    Progetti
+                </h2>
+                <h2 class="lan-eng text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight hidden">
                     Projects
                 </h2>
                 <nav class="flex flex-col gap-3 max-w-md mx-auto">
@@ -109,12 +113,18 @@
             </section>
             <!-- Contacts -->
             <section class="mb-20 text-center bg-red-50/50 border border-red-100 rounded-3xl p-8 sm:p-10 shadow-sm">
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                <h2 class="lan-it text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight">
+                    Contatti
+                </h2>
+                <h2 class="lan-eng text-2xl sm:text-3xl font-extrabold text-gray-900 mb-3 tracking-tight hidden">
                     Contacts
                 </h2>
                 <p><b>Email:</b> simone.piccirillo@hotmail.it<br>
                    <b>Tel:</b> +39 3495624000<br>
-                   <b>Linkedin:</b> <a href="https://www.linkedin.com/in/simone-piccirillo-427143164/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-black text-sm"><u>Click Here</u></a>
+                   <b>Linkedin:</b> <a href="https://www.linkedin.com/in/simone-piccirillo-427143164/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-black text-sm">
+                    <u class="lan-it">Clicca Qui</u>
+                    <u class="lan-eng hidden">Click Here</u>
+                    </a>
                 </p>
             </section>
         </div>
@@ -138,16 +148,11 @@
                 <!-- Spiegazione con Tasti IT / ENG -->
                 <div class="mb-6">
                     <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
-                        <!-- Bottoni di selezione lingua -->
-                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
-                            <button onclick="switchLanguage('p1', 'it')" id="btn-p1-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
-                            <button onclick="switchLanguage('p1', 'eng')" id="btn-p1-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
-                        </div>
-                    </div>
-
+                        <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione</h4>
+                        <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 hidden">Description</h4>
+                </div>
                     <!-- Paragrafo Italiano -->
-                    <div id="p1-desc-it" class="text-gray-700 leading-relaxed text-base">
+                    <div class="lan-it text-black leading-relaxed text-base">
                         Gioco realizzato con Unity per la parte grafica e logica, e FMOD per l'audio.<br>
                         <br>
                         <u>Presenta 2 scene:</u><br>
@@ -160,7 +165,7 @@
                     </div>
 
                     <!-- Paragrafo Inglese-->
-                    <div id="p1-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                    <div class="lan-eng text-black leading-relaxed text-base hidden">
                         A game developed using Unity for graphics and logic, and FMOD for audio.<br>
                         <br>
                         <u>Features 2 scenes:</u><br>
@@ -175,7 +180,8 @@
 
                 <!-- 3) Tecnologie usate (Badge rosso e bianco) -->
                 <div class="mb-8">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 hidden">Used Technology</h4>
                     <div class="flex flex-wrap gap-2">
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Unity</span>
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">C#</span>
@@ -209,16 +215,12 @@
                 <!-- Spiegazione con Tasti IT / ENG -->
                 <div class="mb-6">
                     <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
-                        <!-- Bottoni di selezione lingua -->
-                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
-                            <button onclick="switchLanguage('p2', 'it')" id="btn-p2-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
-                            <button onclick="switchLanguage('p2', 'eng')" id="btn-p2-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
-                        </div>
+                        <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione</h4>
+                        <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 hidden">Description</h4>
                     </div>
 
                     <!-- Paragrafo Italiano -->
-                    <div id="p2-desc-it" class="text-gray-700 leading-relaxed text-base">
+                    <div class="lan-it text-black leading-relaxed text-base">
                         Plugin Audio in formato Vst3 di una Catena Modulare Di Effetti.<br>
                         <br>
                         Il Plugin presenta 3 effetti:<br>
@@ -237,7 +239,7 @@
                     </div>
 
                     <!-- Paragrafo Inglese-->
-                    <div id="p2-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                    <div class="lan-eng text-black leading-relaxed text-base hidden">
                         Audio Plugin in VST3 format for a Modular Effects Chain<br>
                         <br>
                         The plugin features 3 effects:<br>
@@ -325,8 +327,8 @@
 
                 <!-- 3) Tecnologie usate -->
                 <div class="mb-8">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
-                    <div class="flex flex-wrap gap-2">
+                    <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 hidden">Used Technology</h4>                    <div class="flex flex-wrap gap-2">
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">C++</span>
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">JUCE</span>
                     </div>
@@ -357,16 +359,12 @@
                 <!-- Spiegazione con Tasti IT / ENG -->
                 <div class="mb-6">
                     <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
-                        <!-- Bottoni di selezione lingua -->
-                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
-                            <button onclick="switchLanguage('p3', 'it')" id="btn-p3-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
-                            <button onclick="switchLanguage('p3', 'eng')" id="btn-p3-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
-                        </div>
+                        <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione</h4>
+                        <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 hidden">Description</h4>
                     </div>
 
                     <!-- Paragrafo Italiano -->
-                    <div id="p3-desc-it" class="text-gray-700 leading-relaxed text-base">
+                    <div class="lan-it text-gray-700 leading-relaxed text-base">
                         Sito Web creato per esame universitario.<br>
                         <br>
                         Nome del sito: Muusico<br>
@@ -387,7 +385,7 @@
                     </div>
 
                     <!-- Paragrafo Inglese-->
-                    <div id="p3-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                    <div class="lan-eng text-gray-700 leading-relaxed text-base hidden">
                         Website created for a university exam<br>
                         <br>
                         Site name: Muusico<br>
@@ -411,7 +409,8 @@
 
                 <!-- 3) Tecnologie usate -->
                 <div class="mb-8">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 hidden">Used Technology</h4>
                     <div class="flex flex-wrap gap-2">
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Html</span>
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Css</span>
@@ -448,16 +447,12 @@
                 <!-- Spiegazione con Tasti IT / ENG -->
                 <div class="mb-6">
                     <div class="flex items-center justify-between mb-3">
-                        <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione / Description</h4>
-                        <!-- Bottoni di selezione lingua -->
-                        <div class="inline-flex bg-gray-100 p-1 rounded-xl gap-1">
-                            <button onclick="switchLanguage('p4', 'it')" id="btn-p4-it" class="px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm">IT</button>
-                            <button onclick="switchLanguage('p4', 'eng')" id="btn-p4-eng" class="px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900">ENG</button>
-                        </div>
+                        <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400">Spiegazione</h4>
+                        <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 hidden">Description</h4>
                     </div>
 
                     <!-- Paragrafo Italiano -->
-                    <div id="p4-desc-it" class="text-gray-700 leading-relaxed text-base">
+                    <div class="lan-it text-gray-700 leading-relaxed text-base">
                         Progetto di Sound Design su un video animato di una schermata di "Game Over".<br>
                         <br>
                         Tutti i suoni sono programmati utilizzando SuperCollider, esportati e campionati all'interno di Cubase per poi creare il Sound Design del video.<br>
@@ -466,7 +461,7 @@
                     </div>
 
                     <!-- Paragrafo Inglese-->
-                    <div id="p4-desc-eng" class="text-gray-700 leading-relaxed text-base hidden">
+                    <div class="lan-eng text-gray-700 leading-relaxed text-base hidden">
                         Sound design project for an animated "Game Over" screen video.<br>
                         <br>
                         All sounds were programmed using SuperCollider, then exported and sampled in Cubase to create the video's sound design.<br>
@@ -478,8 +473,8 @@
 
                 <!-- 3) Tecnologie usate -->
                 <div class="mb-8">
-                    <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
-                    <div class="flex flex-wrap gap-2">
+                    <h4 class="lan-it text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Tecnologie Usate</h4>
+                    <h4 class="lan-eng text-xs font-bold uppercase tracking-wider text-gray-400 mb-2 hidden">Used Technology</h4>                    <div class="flex flex-wrap gap-2">
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">SuperCollider</span>
                         <span class="bg-red-50 text-red-700 border border-red-200 text-xs font-bold px-3 py-1.5 rounded-lg">Cubase</span>
                     </div>
@@ -505,31 +500,35 @@
 </body>
 
 <script>
-    function switchLanguage(projectId, lang) {
-        const descIt = document.getElementById(projectId + '-desc-it');
-        const descEng = document.getElementById(projectId + '-desc-eng');
-        const btnIt = document.getElementById('btn-' + projectId + '-it');
-        const btnEng = document.getElementById('btn-' + projectId + '-eng');
+    function switchGlobalLanguage(lang) {
+        // Selezioniamo tutti gli elementi usando la sintassi CSS col punto "."
+        const lanIt = document.querySelectorAll('.lan-it');
+        const lanEng = document.querySelectorAll('.lan-eng');
+        const btnIt = document.querySelectorAll('.btn-it');
+        const btnEng = document.querySelectorAll('.btn-eng');
 
         if (lang === 'it') {
-            // Mostra IT, Nascondi ENG
-            descIt.classList.remove('hidden');
-            descEng.classList.add('hidden');
+            // Mostra tutti i testi in Italiano (rimuove 'hidden')
+            lanIt.forEach(el => el.classList.remove('hidden'));
+            // Nasconde tutti i testi in Inglese (aggiunge 'hidden')
+            lanEng.forEach(el => el.classList.add('hidden'));
             
-            // Stile bottone IT attivo
-            btnIt.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm";
-            // Stile bottone ENG inattivo
-            btnEng.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900";
+            // Applica lo stile attivo a TUTTI i bottoni IT trovati
+            btnIt.forEach(btn => btn.className = "btn-it px-7 py-3 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm");
+            // Applica lo stile inattivo a TUTTI i bottoni ENG trovati
+            btnEng.forEach(btn => btn.className = "btn-eng px-7 py-3 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900");
         } else {
-            // Mostra ENG, Nascondi IT
-            descEng.classList.remove('hidden');
-            descIt.classList.add('hidden');
+            // Mostra tutti i testi in Inglese
+            lanEng.forEach(el => el.classList.remove('hidden'));
+            // Nasconde tutti i testi in Italiano
+            lanIt.forEach(el => el.classList.add('hidden'));
             
-            // Stile bottone ENG attivo
-            btnEng.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm";
-            // Stile bottone IT inattivo
-            btnIt.className = "px-3 py-1 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900";
+            // Applica lo stile attivo a TUTTI i bottoni ENG
+            btnEng.forEach(btn => btn.className = "btn-eng px-7 py-3 text-xs font-bold rounded-lg transition-all bg-red-600 text-white shadow-sm");
+            // Applica lo stile inattivo a TUTTI i bottoni IT
+            btnIt.forEach(btn => btn.className = "btn-it px-7 py-3 text-xs font-bold rounded-lg transition-all text-gray-600 hover:text-gray-900");
         }
     }
 </script>
+
 </html>
